@@ -1,0 +1,53 @@
+<div class="align-middle">
+    <div class="align-middle">
+  <table class="table">
+    <thead>
+      <tr>
+        <th>ID</th>
+        <th>Name</th>
+        <th>Address</th>
+        <th>Image</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr *ngFor="let item of listResidence">
+        <th scope="col">{{ item.id }}</th>
+        <th scope="col">{{ item.name }}</th>
+        <th scope="col">{{ item.address }}</th>
+        <th scope="col">
+          <img
+            src="{{ item.image }}"
+            class="img-fluid rounded float-left"
+            width="150"
+          />
+          
+        </th>
+        <th><button (click)="show(item)" class="button"> Show Appartments</button></th>
+      </tr>
+    </tbody>
+  </table>
+</div>
+<br> 
+<div class="align-middle" [hidden]="hide">
+    Search : <input type="text" name="search" *[(ngModel)]="searchText"(change)="search"> 
+    <table class="table" *ngIf="listApartmentsFiltered.length>0">
+        <thead>
+            <tr>
+                
+                <th> ID </th>
+                <th> Number </th>
+                <th> Residence </th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr *ngFor="let a of listApartmentsFiltered">
+                <td>{{a.id}}</td>
+                <td>{{a.appartNum}}</td>
+                <td>{{a.residence.name}}</td>
+            </tr>
+        </tbody>
+    </table>
+    <div *ngIf="listApartmentsFiltered.length == 0"> <p>No Apartments Found</p></div>
+</div>
+</div>
+
