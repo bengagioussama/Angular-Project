@@ -12,42 +12,42 @@ export class UsersComponent {
       id: 1,
       username: 'Oussama',
       password: 'pwd',
-      picture: '../../assets/images/cap2.jpg',
+      picture: 'https://bootdey.com/img/Content/avatar/avatar1.png',
       accountCategory: 'Admin'
     },
     {
       id: 2,
       username: 'flen',
       password: 'password',
-      picture: '../../assets/images/cap3.webp',
+      picture: 'https://bootdey.com/img/Content/avatar/avatar2.png',
       accountCategory: 'Customer'
     },
     {
       id: 3,
       username: 'flen',
       password: 'password',
-      picture: '../../assets/images/cap4.webp',
+      picture: 'https://bootdey.com/img/Content/avatar/avatar3.png',
       accountCategory: 'Customer'
     },
     {
       id: 4,
       username: 'flen',
       password: 'password',
-      picture: '../../assets/images/cap5.webp',
+      picture: 'https://bootdey.com/img/Content/avatar/avatar4.png',
       accountCategory: 'Customer'
     },
     {
       id: 5,
       username: 'flen',
       password: 'password',
-      picture: '../../assets/images/cap4.webp',
+      picture: 'https://bootdey.com/img/Content/avatar/avatar5.png',
       accountCategory: 'Customer'
     },
     {
       id: 6,
       username: 'flen',
       password: 'password',
-      picture: '../../assets/images/cap2.jpg',
+      picture: 'https://bootdey.com/img/Content/avatar/avatar6.png',
       accountCategory: 'Customer'
     },
 
