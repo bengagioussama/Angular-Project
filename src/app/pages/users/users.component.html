@@ -1,0 +1,13 @@
+
+<div class="container">
+  <div class="row">
+      <div class="card col-4" style="width: 18rem;" *ngFor="let u of listUsers">
+          <img  [src]="u.picture" class="card-img-top" alt="...">
+          <div class="card-body">
+            <h5 class="card-title">Username : {{u.username}}</h5>
+            <p class="card-text">Password : {{u.password}}</p>
+            <button  class="btn btn-danger" [disabled]="u.accountCategory ==='Admin'" (click)="deleteUser(u)">Delete Account</button>
+          </div>
+        </div>
+  </div>
+</div>

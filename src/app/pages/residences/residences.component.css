@@ -1,0 +1,4 @@
+input[name='search'] {
+    visibility: visible !important;
+    display: block !important; 
+  }

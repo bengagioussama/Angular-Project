@@ -1,6 +1,6 @@
 import { Component } from '@angular/core';
-import { Apartment } from 'src/app/core/models/appartement';
-import { Residence } from 'src/app/core/models/residence';
+import { Residence } from '../../core/models/residence';
+import { Apartment } from '../../core/models/appartement';
 
 @Component({
   selector: 'app-residences',
@@ -8,11 +8,10 @@ import { Residence } from 'src/app/core/models/residence';
   styleUrls: ['./residences.component.css'],
 })
 export class ResidencesComponent {
-  listApartmentsFiltered: Apartment[] = [];
-  listApartmentsFilteredBySurface: Apartment[] = [];
+  listApartmentsFiltred: Apartment[] = [];
   searchText = '';
   hide = true;
-  listResidence: Residence[] = [
+  listResidences: Residence[] = [
     {
       id: 1,
       name: 'El fel',
@@ -48,7 +47,7 @@ export class ResidencesComponent {
       surfaceTerrace: 20,
       category: 'S+1',
       description: 'AppartementS+1',
-      residence: this.listResidence[0],
+      residence: this.listResidences[0],
     },
     {
       id: 2,
@@ -59,7 +58,7 @@ export class ResidencesComponent {
       surfaceTerrace: 0,
       category: 'S+2',
       description: 'AppartementS+2',
-      residence: this.listResidence[0],
+      residence: this.listResidences[0],
     },
     {
       id: 3,
@@ -70,7 +69,7 @@ export class ResidencesComponent {
       surfaceTerrace: 30,
       category: 'S+3',
       description: 'AppartementS+3',
-      residence: this.listResidence[1],
+      residence: this.listResidences[1],
     },
     {
       id: 4,
@@ -81,19 +80,19 @@ export class ResidencesComponent {
       surfaceTerrace: 30,
       category: 'S+3',
       description: 'AppartementS+3',
-      residence: this.listResidence[1],
+      residence: this.listResidences[1],
     },
   ];
   show(r: Residence) {
-  this.listApartmentsFiltered= [];
-
     this.hide = !this.hide;
-    this.listApartmentsFiltered = this.listApartments.filter(
+    this.listApartmentsFiltred = this.listApartments.filter(
       (a) => a.residence.id === r.id
     );
   }
 
   search() {
-    this.listApartmentsFilteredBySurface = this.listApartmentsFiltered.filter((a)=> a.surface == Number(this.searchText))
+    this.listApartmentsFiltred = this.listApartmentsFiltred.filter(
+      (a) => a.surface == Number(this.searchText)
+    );
   }
 }
